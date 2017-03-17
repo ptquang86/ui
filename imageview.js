@@ -46,7 +46,8 @@ exports.createImageView = function(args) {
 
 function _setImage(image) {
 	this.image = image;
-	this.children[0].image = image;
+	var _imageview = this.children[0];
+	_imageview && (_imageview.image = image);
 }
 
 function _resizeImage(e) {
